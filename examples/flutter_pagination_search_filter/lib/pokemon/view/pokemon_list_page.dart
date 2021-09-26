@@ -53,7 +53,7 @@ class _PokemonListPageState extends State<PokemonListPage> {
                     onRefresh: () async {
                       final pokemonBloc = context.read<PokemonBloc>()
                         ..add(PokemonFetchRefresh());
-                      // TODO:
+                      // TODO: Understand when the event is over
                     },
                     child: ListView.builder(
                       controller: _controller,
