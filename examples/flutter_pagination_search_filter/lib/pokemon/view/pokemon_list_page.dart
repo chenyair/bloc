@@ -75,4 +75,12 @@ class _PokemonListPageState extends State<PokemonListPage> {
       ),
     );
   }
+
+  @override
+  void dispose() {
+    _controller
+      ..removeListener(_fetchMorePokemons)
+      ..dispose();
+    super.dispose();
+  }
 }
